@@ -1,0 +1,309 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Protest+Guerrilla&display=swap');
+
+/* General styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e9e9e9;
+  color: #14181d;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Header */
+.site-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 50px;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main article */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+}
+
+.blog-post {
+  padding: 50px;
+}
+
+.blog-post h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.blog-post > h2 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.intro {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.article-columns {
+  column-count: 3;
+  column-gap: 30px;
+}
+
+.article-columns section {
+  break-inside: avoid;
+}
+
+.article-columns h2 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.article-columns p {
+  line-height: 1.5;
+}
+
+/* Album gallery */
+.album-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.album-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-gallery img:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Author section */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.author > div:first-child {
+  flex: 1;
+}
+
+.author h2 {
+  margin-top: 0;
+}
+
+.author-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Comments */
+.comments {
+  background: #e9e9e9;
+  padding: 50px;
+}
+
+.comments h2 {
+  margin-top: 0;
+}
+
+.comment {
+  margin-bottom: 25px;
+}
+
+.comment strong {
+  display: block;
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  background: #14181d;
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+footer .social-icons {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .main-content {
+    width: 100%;
+  }
+
+  .blog-post h1 {
+    font-size: 4rem;
+  }
+
+  .article-columns {
+    column-count: 2;
+  }
+
+  .author {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 20px;
+  }
+
+  .site-header nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .blog-post {
+    padding: 20px;
+  }
+
+  .blog-post h1 {
+    font-size: 3rem;
+  }
+
+  .blog-post > h2,
+  .article-columns h2 {
+    font-size: 2rem;
+  }
+
+  .article-columns {
+    column-count: 1;
+  }
+
+  .album-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .album-gallery img:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .author {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .author-photo {
+    width: 200px;
+  }
+
+  .comments {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  footer nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+/* Task 1 final heading adjustments */
+
+.article-columns h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.blog-post > h2 {
+  font-size: 3rem;
+}
+
+.blog-post h1 {
+  font-size: 6rem;
+}
+
+/* Keep comments aligned with the main article */
+.comments {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #e9e9e9;
+}
+/* Make the X icon visible in the author section */
+.author .social-icons img:last-child {
+  filter: brightness(0);
+}
